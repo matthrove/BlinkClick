@@ -1187,11 +1187,8 @@ body {
   }
 }
 
-/* ============================================
- Estilos para páginas de Login y Registro
- ============================================ */
+/* Estilos para páginas de Login y Registro*/
 
-/* Ocultar navbar y footer en páginas de auth */
 .navbar.hidden,
 .footer.hidden {
   display: none !important;
@@ -1226,7 +1223,7 @@ body {
   border-color: #207949;
 }
 
-/* Contenedor principal de auth */
+
 .auth-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #000000 0%, #1a0033 50%, #000000 100%);
@@ -1245,7 +1242,7 @@ body {
   align-items: center;
 }
 
-/* Columna izquierda (Branding) */
+
 .auth-branding {
   text-align: center;
 }
@@ -1389,9 +1386,7 @@ body {
   text-decoration: underline;
 }
 
-/* ============================================
- Estilos para sección Fundadores
- ============================================ */
+/* Estilos para sección Fundadores*/
 
 .fundadores-section {
   min-height: 100vh;
