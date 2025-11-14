@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos | Blink Click</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="On.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><a href="index.html"><img src="img/blinkclick.png" alt="Blink Click" class="logo-img"></a></h1>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item-dropdown">
+                    <a href="index.html" class="nav-link-dropdown">Inicio</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#testimonios">Testimonios</a></li>
+                        <li><a href="index.html#mision">Misión</a></li>
+                        <li><a href="index.html#vision">Visión</a></li>
+                        <li><a href="index.html#caracteristicas">Características</a></li>
+                        <li><a href="index.html#funcionamiento">Funcionamiento</a></li>
+                    </ul>
+                </li>
+                <li><a href="conocenos.html">Conócenos</a></li>
+                <li><a href="aliados.html">Aliados</a></li>
+            </ul>
+            <div class="nav-buttons" id="navButtons">
+                <div class="nav-button-dropdown">
+                    <button class="btn-acceder">Acceder</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="login-paciente.html">Paciente</a></li>
+                        <li><a href="login-cuidador.html">Cuidador</a></li>
+                    </ul>
+                </div>
+                <div class="nav-button-dropdown">
+                    <button class="btn-registrarse">Registrarse</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="registro-paciente.html">Paciente</a></li>
+                        <li><a href="registro-cuidador.html">Cuidador</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-user-container" id="navUserContainer" style="display: none; position: relative;">
+                <div class="nav-user" id="navUser">
+                    <span style="color: #fff; font-weight: 500; font-size: 1rem; cursor: pointer;" id="userName"></span>
+                </div>
+                <div class="user-dropdown-menu" id="userDropdownMenu" style="display: none;">
+                    <button class="btn-cerrar-sesion" id="btnCerrarSesion">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Contactanos -->
+    <section style="min-height: 100vh; background: linear-gradient(135deg, #000000 0%, #1a0033 50%, #000000 100%); padding: 6rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h1 style="font-size: 4rem; font-weight: 700; color: #ffffff; margin-bottom: 4rem; text-align: center; font-family: 'Roboto', sans-serif;">CONTACTANOS</h1>
+        
+        <div id="contactFormContainer" style="max-width: 800px; width: 100%;">
+            <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <!-- Fila de 4 campos pequeños (Rol, Teléfono, Correo, Nombre) -->
+                <div class="contact-form-row" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+                    <div style="position: relative;">
+                        <label for="rol" style="display: block; margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">Rol</label>
+                        <select id="rol" name="rol" required style="width: 100%; padding: 0.75rem; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 5px; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; font-size: 1rem; font-family: 'Roboto', sans-serif; cursor: pointer; appearance: none;" onfocus="this.style.borderColor='#207949'; this.style.outline='none';" onblur="this.style.borderColor='rgba(255, 255, 255, 0.2)';">
+                            <option value="" style="background-color: #1B004B; color: #ffffff;">Seleccionar</option>
+                            <option value="paciente" style="background-color: #1B004B; color: #ffffff;">Paciente</option>
+                            <option value="cuidador" style="background-color: #1B004B; color: #ffffff;">Cuidador</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="telefono" style="display: block; margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required style="width: 100%; padding: 0.75rem; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 5px; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; font-size: 1rem; font-family: 'Roboto', sans-serif;" onfocus="this.style.borderColor='#207949'; this.style.outline='none';" onblur="this.style.borderColor='rgba(255, 255, 255, 0.2)';" placeholder="Ej: +51 999 999 999">
+                    </div>
+                    <div>
+                        <label for="correo" style="display: block; margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" required style="width: 100%; padding: 0.75rem; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 5px; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; font-size: 1rem; font-family: 'Roboto', sans-serif;" onfocus="this.style.borderColor='#207949'; this.style.outline='none';" onblur="this.style.borderColor='rgba(255, 255, 255, 0.2)';" placeholder="correo@ejemplo.com">
+                    </div>
+                    <div>
+                        <label for="nombre" style="display: block; margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 0.75rem; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 5px; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; font-size: 1rem; font-family: 'Roboto', sans-serif;" onfocus="this.style.borderColor='#207949'; this.style.outline='none';" onblur="this.style.borderColor='rgba(255, 255, 255, 0.2)';" placeholder="Tu nombre">
+                    </div>
+                </div>
+                
+                <!-- Campo grande para consulta -->
+                <div>
+                    <label for="consulta" style="display: block; margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.9); font-size: 1rem;">Manda tu consulta</label>
+                    <textarea id="consulta" name="consulta" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 5px; background-color: rgba(255, 255, 255, 0.1); color: #ffffff; font-size: 1rem; font-family: 'Roboto', sans-serif; min-height: 150px; resize: vertical;" onfocus="this.style.borderColor='#207949'; this.style.outline='none';" onblur="this.style.borderColor='rgba(255, 255, 255, 0.2)';" placeholder="Escribe tu consulta aquí..."></textarea>
+                </div>
+                
+                <!-- Botón enviar -->
+                <button type="submit" style="width: 100%; padding: 1rem; background-color: #207949; color: #fff; border: none; border-radius: 5px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-family: 'Roboto', sans-serif; margin-top: 1rem;">Enviar</button>
+            </form>
+        </div>
+        
+        <div id="successMessage" style="display: none; text-align: center; margin-top: 2rem;">
+            <p style="font-size: 2rem; color: #207949; font-weight: 600;">¡Enviado con éxito!</p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>Llámanos</h3>
+                <p>01 311 6000 (Lima)</p>
+                <p>0 801 1 6000 (Provincia)</p>
+            </div>
+            <div class="footer-box">
+                <h3>Contáctanos</h3>
+                <p>Envíanos un formulario</p>
+                <p><a href="contactanos.html" style="color: #207949; text-decoration: none; font-weight: 600;">Llenar ></a></p>
+            </div>
+            <div class="footer-box">
+                <h3>Redes sociales</h3>
+                <p>Instagram: @blinkandclick.pe</p>
+                <p>LinkedIn: Blink&Click</p>
+                <p>YouTube: Blink&Click Oficial</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Verificar si el usuario está logueado y mostrar su nombre
+        const usuario = localStorage.getItem('usuario');
+        const logueado = localStorage.getItem('logueado');
+        const navButtons = document.getElementById('navButtons');
+        const navUserContainer = document.getElementById('navUserContainer');
+        const userName = document.getElementById('userName');
+        
+        if (logueado === 'true' && usuario && navButtons && navUserContainer && userName) {
+            navButtons.style.display = 'none';
+            navUserContainer.style.display = 'block';
+            userName.textContent = usuario;
+        }
+        
+        // Manejar clic en el usuario para mostrar/ocultar el panel de logout
+        const navUser = document.getElementById('navUser');
+        const userDropdownMenu = document.getElementById('userDropdownMenu');
+        const btnCerrarSesion = document.getElementById('btnCerrarSesion');
+        
+        if (navUser && userDropdownMenu) {
+            navUser.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (userDropdownMenu.style.display === 'none' || userDropdownMenu.style.display === '') {
+                    userDropdownMenu.style.display = 'block';
+                } else {
+                    userDropdownMenu.style.display = 'none';
+                }
+            });
+        }
+        
+        // Cerrar el panel al hacer clic fuera
+        if (userDropdownMenu) {
+            document.addEventListener('click', function(e) {
+                if (navUserContainer && !navUserContainer.contains(e.target)) {
+                    userDropdownMenu.style.display = 'none';
+                }
+            });
+        }
+        
+        // Manejar cerrar sesión
+        if (btnCerrarSesion) {
+            btnCerrarSesion.addEventListener('click', function() {
+                localStorage.removeItem('usuario');
+                localStorage.removeItem('logueado');
+                if (navButtons && navUserContainer) {
+                    navButtons.style.display = 'flex';
+                    navUserContainer.style.display = 'none';
+                }
+                // Recargar la página para actualizar el estado
+                window.location.reload();
+            });
+        }
+        
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Ocultar el formulario
+            document.getElementById('contactFormContainer').style.display = 'none';
+            
+            // Mostrar mensaje de éxito
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Limpiar el formulario (aunque esté oculto)
+            this.reset();
+            
+            // Después de 3 segundos, volver a mostrar el formulario (opcional)
+            setTimeout(function() {
+                document.getElementById('contactFormContainer').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
+

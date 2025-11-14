@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acceder - Paciente | Blink Click</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="On.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar hidden">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>
+            <a href="index.html"
+              ><img src="img/blinkclick.png" alt="Blink Click" class="logo-img"
+            /></a>
+          </h1>
+        </div>
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link-dropdown">Inicio</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#testimonios">Testimonios</a></li>
+              <li><a href="index.html#mision">Misión</a></li>
+              <li><a href="index.html#vision">Visión</a></li>
+              <li><a href="index.html#caracteristicas">Características</a></li>
+              <li><a href="index.html#funcionamiento">Funcionamiento</a></li>
+            </ul>
+          </li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="aliados.html">Aliados</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <div class="nav-button-dropdown">
+            <button class="btn-acceder">Acceder</button>
+            <ul class="dropdown-menu">
+              <li><a href="login-paciente.html">Paciente</a></li>
+              <li><a href="login-cuidador.html">Cuidador</a></li>
+            </ul>
+          </div>
+          <div class="nav-button-dropdown">
+            <button class="btn-registrarse">Registrarse</button>
+            <ul class="dropdown-menu">
+              <li><a href="registro-paciente.html">Paciente</a></li>
+              <li><a href="registro-cuidador.html">Cuidador</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Botón de regreso -->
+    <div class="back-button-container">
+      <a href="index.html" class="back-button">←</a>
+    </div>
+
+    <div class="auth-container">
+      <div class="auth-wrapper">
+        <!-- Columna izquierda: BLINK CLICK -->
+        <div class="auth-branding">
+          <h1 class="auth-title">BLINK<br />CLICK</h1>
+          <hr class="auth-divider" />
+          <p class="auth-subtitle">Tu autonomía es<br />nuestra prioridad.</p>
+        </div>
+
+        <!-- Columna derecha: Formulario -->
+        <div class="auth-form-container">
+          <form id="loginForm" class="auth-form">
+            <div class="auth-form-group">
+              <label for="usuario" class="auth-label">Usuario</label>
+              <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                class="auth-input"
+                required
+              />
+            </div>
+            <div class="auth-form-group password-group">
+              <label for="password" class="auth-label">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="auth-input password-input"
+                required
+              />
+              <button
+                type="button"
+                id="togglePassword"
+                class="toggle-password-btn"
+                title="Mostrar/Ocultar contraseña"
+              >
+                👁️
+              </button>
+            </div>
+            <button type="submit" class="auth-submit-btn">
+              Iniciar Sesión
+            </button>
+
+            <div class="auth-link-container">
+              <p class="auth-link-text">
+                ¿No tienes cuenta?
+                <a href="registro-paciente.html" class="auth-link"
+                  >Regístrate</a
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Toggle password visibility
+      const togglePassword = document.getElementById("togglePassword");
+      const password = document.getElementById("password");
+
+      if (togglePassword && password) {
+        togglePassword.addEventListener("click", function () {
+          if (password.type === "password") {
+            password.type = "text";
+            togglePassword.textContent = "🙈";
+          } else {
+            password.type = "password";
+            togglePassword.textContent = "👁️";
+          }
+        });
+      }
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const usuario = document.getElementById("usuario").value;
+          // Guardar el nombre de usuario en localStorage
+          localStorage.setItem("usuario", usuario);
+          localStorage.setItem("logueado", "true");
+          // Redirigir a index.html
+          window.location.href = "index.html";
+        });
+    </script>
+
+    <!-- Pie de página -->
+    <footer class="footer hidden">
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Llámanos</h3>
+          <p>01 311 6000 (Lima)</p>
+          <p>0 801 1 6000 (Provincia)</p>
+        </div>
+        <div class="footer-box">
+          <h3>Contáctanos</h3>
+          <p>Envíanos un formulario</p>
+          <p><a href="contactanos.html" class="auth-link">Llenar ></a></p>
+        </div>
+        <div class="footer-box">
+          <h3>Redes sociales</h3>
+          <p>Instagram: @blinkandclick.pe</p>
+          <p>LinkedIn: Blink&Click</p>
+          <p>YouTube: Blink&Click Oficial</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

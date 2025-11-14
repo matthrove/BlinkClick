@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blink Click</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="On.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>
+            <a href="index.html"
+              ><img src="img/blinkclick.png" alt="Blink Click" class="logo-img"
+            /></a>
+          </h1>
+        </div>
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="#inicio" class="nav-link-dropdown">Inicio</a>
+            <ul class="dropdown-menu">
+              <li><a href="#testimonios">Testimonios</a></li>
+              <li><a href="#mision">Misión</a></li>
+              <li><a href="#vision">Visión</a></li>
+              <li><a href="#caracteristicas">Características</a></li>
+              <li><a href="#funcionamiento">Funcionamiento</a></li>
+            </ul>
+          </li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="aliados.html">Aliados</a></li>
+        </ul>
+        <div class="nav-buttons" id="navButtons">
+          <div class="nav-button-dropdown">
+            <button class="btn-acceder">Acceder</button>
+            <ul class="dropdown-menu">
+              <li><a href="login-paciente.html">Paciente</a></li>
+              <li><a href="login-cuidador.html">Cuidador</a></li>
+            </ul>
+          </div>
+          <div class="nav-button-dropdown">
+            <button class="btn-registrarse">Registrarse</button>
+            <ul class="dropdown-menu">
+              <li><a href="registro-paciente.html">Paciente</a></li>
+              <li><a href="registro-cuidador.html">Cuidador</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="nav-user-container"
+          id="navUserContainer"
+          style="display: none"
+        >
+          <div class="nav-user" id="navUser">
+            <span id="userName"></span>
+          </div>
+          <div
+            class="user-dropdown-menu"
+            id="userDropdownMenu"
+            style="display: none"
+          >
+            <button class="btn-cerrar-sesion" id="btnCerrarSesion">
+              Cerrar Sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="section inicio">
+      <div class="container inicio-container">
+        <div class="inicio-content">
+          <h1 class="inicio-titulo">
+            <span class="titulo-linea">Observa</span>
+            <span class="titulo-linea">Parpadea</span>
+            <span class="titulo-linea">Disfruta</span>
+          </h1>
+          <p class="inicio-subtitulo">
+            Blink & Click, la oportunidad que tus ojos tanto esperaban para
+            navegar
+          </p>
+          <button class="btn-descarga">¡DESCARGA YA!</button>
+        </div>
+        <div class="inicio-image">
+          <div class="phone-3d-container">
+            <img
+              src="img/Celular.jpg"
+              alt="Celular Blink Click"
+              class="phone-back"
+            />
+            <img
+              src="img/Celular.jpg"
+              alt="Celular Blink Click"
+              class="phone-front"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Conócenos -->
+    <section id="conocenos" class="section conocenos">
+      <div class="container conocenos-container">
+        <div class="testimonios-section" id="testimonios">
+          <h3 class="testimonios-title">Testimonios</h3>
+          <div class="testimonios-grid">
+            <div class="testimonio-item">
+              <div class="testimonio-image">
+                <img src="img/Testigo.jpg" alt="Testimonio 1" />
+              </div>
+              <div class="testimonio-text">
+                <p class="testimonio-quote">
+                  " Antes necesitaba ayuda para usar el celular, pero ahora
+                  puedo navegar solo con la mirada. Esta app me devolvió
+                  independencia y confianza"
+                </p>
+                <p class="testimonio-author">
+                  — Julio Perez, usuario con discapacidad
+                </p>
+              </div>
+            </div>
+            <div class="testimonio-item">
+              <div class="testimonio-image">
+                <img src="img/testigo2.jpg" alt="Testimonio 2" />
+              </div>
+              <div class="testimonio-text">
+                <p class="testimonio-quote">
+                  " Antes necesitaba ayuda para usar el celular, pero ahora
+                  puedo navegar solo con la mirada. Esta app me devolvió
+                  independencia y confianza"
+                </p>
+                <p class="testimonio-author">
+                  — Julio Perez, usuario con discapacidad
+                </p>
+              </div>
+            </div>
+            <div class="testimonio-item">
+              <div class="testimonio-image">
+                <img src="img/testigo3.jpg" alt="Testimonio 3" />
+              </div>
+              <div class="testimonio-text">
+                <p class="testimonio-quote">
+                  " Antes necesitaba ayuda para usar el celular, pero ahora
+                  puedo navegar solo con la mirada. Esta app me devolvió
+                  independencia y confianza"
+                </p>
+                <p class="testimonio-author">
+                  — Julio Perez, usuario con discapacidad
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="conocenos-cards">
+          <div
+            style="
+              flex: 0 0 auto;
+              max-width: 600px;
+              display: flex;
+              align-items: stretch;
+            "
+          >
+            <img
+              src="img/mision.jpg"
+              alt="Misión"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+              "
+            />
+          </div>
+          <div class="card-rounded" id="mision">
+            <h3>Misión</h3>
+            <p
+              style="
+                margin-bottom: 1.2rem;
+                font-size: 1.15rem;
+                line-height: 1.8;
+              "
+            >
+              Promover la inclusión tecnológica mediante la innovación visual,
+              transformando la forma en que las personas con discapacidad motora
+              interactúan con la tecnología.
+            </p>
+            <p
+              style="
+                margin-bottom: 1.2rem;
+                font-size: 1.15rem;
+                line-height: 1.8;
+              "
+            >
+              Convertir la visión en una herramienta poderosa de independencia y
+              autonomía, permitiendo que cada usuario tenga el control total de
+              su experiencia digital.
+            </p>
+            <p style="font-size: 1.15rem; line-height: 1.8">
+              Fomentar un entorno digital más empático, accesible e inclusivo,
+              donde la tecnología se adapte a las necesidades de todos, sin
+              barreras ni limitaciones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Conócenos 2 -->
+    <section id="conocenos2" class="section conocenos2">
+      <div class="container conocenos2-container">
+        <div class="conocenos2-grid">
+          <div class="card-rounded vision-card" id="vision">
+            <h3>Visión</h3>
+            <p
+              style="
+                margin-bottom: 1.2rem;
+                font-size: 1.15rem;
+                line-height: 1.8;
+              "
+            >
+              Ser la plataforma líder en tecnología de control por visión,
+              reconocida mundialmente por nuestra innovación y compromiso con la
+              accesibilidad.
+            </p>
+            <p
+              style="
+                margin-bottom: 1.2rem;
+                font-size: 1.15rem;
+                line-height: 1.8;
+              "
+            >
+              Expandir nuestras soluciones a nivel global, llegando a millones
+              de usuarios que buscan mayor independencia y calidad de vida a
+              través de la tecnología.
+            </p>
+            <p style="font-size: 1.15rem; line-height: 1.8">
+              Crear un futuro donde la tecnología sea verdaderamente universal,
+              eliminando las barreras que limitan el potencial humano y
+              promoviendo la igualdad de oportunidades.
+            </p>
+          </div>
+          <div
+            style="
+              grid-column: 2;
+              grid-row: 1;
+              max-width: 500px;
+              justify-self: end;
+              align-self: stretch;
+              display: flex;
+              align-items: stretch;
+            "
+          >
+            <img
+              src="img/vision.png"
+              alt="Visión"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+              "
+            />
+          </div>
+          <div
+            style="
+              grid-column: 1;
+              grid-row: 2;
+              max-width: 500px;
+              justify-self: start;
+              align-self: stretch;
+              display: flex;
+              align-items: stretch;
+            "
+          >
+            <img
+              src="img/caracteristicas.jpg"
+              alt="Características"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+              "
+            />
+          </div>
+          <div class="card-rounded caracteristicas-card" id="caracteristicas">
+            <h3>Características</h3>
+            <p
+              style="
+                margin-bottom: 1.2rem;
+                font-size: 1.15rem;
+                line-height: 1.8;
+              "
+            >
+              <strong>Control por visión:</strong> Navega y controla tu
+              dispositivo usando únicamente el movimiento de tus ojos, sin
+              necesidad de usar las manos.
+            </p>
+            <p
+              style="
+                margin-bottom: 1.2rem;
+                font-size: 1.15rem;
+                line-height: 1.8;
+              "
+            >
+              <strong>Interfaz intuitiva:</strong> Diseño pensado para ser fácil
+              de usar, con una curva de aprendizaje mínima y máxima eficiencia.
+            </p>
+            <p style="font-size: 1.15rem; line-height: 1.8">
+              <strong>Personalización avanzada:</strong> Adapta la sensibilidad
+              y configuraciones según tus necesidades específicas para una
+              experiencia totalmente personalizada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Aliados -->
+    <section id="aliados" class="section aliados">
+      <div class="container aliados-container">
+        <h2 id="funcionamiento">¿Cómo funciona?</h2>
+        <p class="aliados-description">
+          Blink & Click permite controlar tu computadora con el movimiento de
+          los ojos. Diseñado para personas con discapacidad motora, ofrece
+          acceso rápido y accesible a tus aplicaciones favoritas.
+        </p>
+        <div class="aliados-content">
+          <!-- Espacio para contenido adicional -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Llámanos</h3>
+          <p>01 311 6000 (Lima)</p>
+          <p>0 801 1 6000 (Provincia)</p>
+        </div>
+        <div class="footer-box">
+          <h3>Contáctanos</h3>
+          <p>Envíanos un formulario</p>
+          <p><a href="contactanos.html" class="auth-link">Llenar ></a></p>
+        </div>
+        <div class="footer-box">
+          <h3>Redes sociales</h3>
+          <p>Instagram: @blinkandclick.pe</p>
+          <p>LinkedIn: Blink&Click</p>
+          <p>YouTube: Blink&Click Oficial</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
